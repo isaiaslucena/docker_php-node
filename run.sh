@@ -1,12 +1,12 @@
 #!/bin/bash -x
 
-if [[ "${FIRST_RUN}" == "**TRUE**" ]] ; then
+if [[ -f "/FIRST_RUN" ]] ; then
+	rm -rf /FIRST_RUN
 	composer install
 	npm install bower-npm-resolver
 	npm install
 	/app/node_modules/bower/bin/bower --allow-root install
 	/app/node_modules/gulp/bin/gulp.js build
-	unset FIRST_RUN
 	php artisan key:generate
 fi
 

@@ -15,7 +15,7 @@ RUN apt-get update && \
 ADD run.sh /run.sh
 RUN chmod 755 /run.sh
 
-ENV FIRST_RUN **TRUE**
+ADD FIRST_RUN /FIRST_RUN
 
 RUN mkdir -p /app
 
