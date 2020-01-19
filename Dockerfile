@@ -5,9 +5,9 @@ ENV TZ America/Sao_Paulo
 
 RUN apt-get update && \
 		DEBIAN_FRONTEND=noninteractive apt-get install -yq \
-		curl git unzip php7.2-cli php7.2-zip \
-		php7.2-mysql php7.2-bcmath php7.2-json php7.2-mbstring \
-		php7.2-gd php7.2-curl php-tokenizer php-xml php-imagick && \
+		curl git unzip php7.4-cli php7.4-zip \
+		php7.4-mysql php7.4-bcmath php7.4-json php7.4-mbstring \
+		php7.4-gd php7.4-curl php-tokenizer php-xml php-imagick && \
 		rm -rf /var/lib/apt/lists/* && \
 		curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
 		curl -sL https://deb.nodesource.com/setup_12.x | bash - && apt-get install -yq nodejs
