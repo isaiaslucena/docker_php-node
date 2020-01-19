@@ -4,9 +4,9 @@ MAINTAINER Isaias Neto <isaiasneto@gmail.com>
 ENV TZ America/Sao_Paulo
 
 RUN apt-get update && \
-		DEBIAN_FRONTEND=noninteractive \
 		apt-get -y install software-properties-common && \
 		add-apt-repository -y ppa:ondrej/php && \
+		DEBIAN_FRONTEND=noninteractive \
 		apt-get install -yq \
 		curl git unzip php7.4-cli php7.4-zip \
 		php7.4-mysql php7.4-bcmath php7.4-json php7.4-mbstring \
