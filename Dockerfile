@@ -10,7 +10,7 @@ RUN apt-get update && \
 		php7.2-gd php7.2-curl php-tokenizer php-xml php-imagick && \
 		rm -rf /var/lib/apt/lists/* && \
 		curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
-		curl -sL https://deb.nodesource.com/setup_10.x | bash - && apt-get install -yq nodejs
+		curl -sL https://deb.nodesource.com/setup_12.x | bash - && apt-get install -yq nodejs
 
 ADD run.sh /run.sh
 RUN chmod 755 /run.sh
