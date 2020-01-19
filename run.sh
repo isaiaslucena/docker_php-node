@@ -3,7 +3,8 @@
 if [[ -f "/FIRST_RUN" ]] ; then
 	rm -rf /FIRST_RUN
 	composer install
-	npm install
+	yarn install
+	yarn run dev
 	php artisan key:generate
 fi
 
