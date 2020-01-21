@@ -5,6 +5,7 @@ if [[ -f "/FIRST_RUN" ]] ; then
 	composer install
 	yarn install
 	yarn run dev
+	rm -rf /app/bootstrap/cache/*
 	php artisan key:generate
 fi
 
