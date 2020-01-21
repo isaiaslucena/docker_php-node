@@ -8,4 +8,4 @@ if [[ -f "/FIRST_RUN" ]] ; then
 	php artisan key:generate
 fi
 
-php artisan serve --port 80 --host 0.0.0.0
+php artisan serve --port 8000 --host 0.0.0.0
