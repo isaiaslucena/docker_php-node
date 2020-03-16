@@ -1,7 +1,7 @@
 #!/bin/bash -x
 
-source .env
 unset REDIS_PORT
+source .env
 
 if [[ -f "/FIRST_RUN" ]] ; then
 	rm -rf /FIRST_RUN
