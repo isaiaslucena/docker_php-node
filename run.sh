@@ -1,5 +1,7 @@
 #!/bin/bash -x
 
+unset REDIS_PORT
+
 if [[ -f "/FIRST_RUN" ]] ; then
 	rm -rf /FIRST_RUN
 	composer install
